@@ -1,38 +1,262 @@
-.App {
+.banner {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  padding: 8px 0;
+  color: #005979;
+  background-color: #eaf6fa;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url("smartphone_production_1.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+
+.App-logo {
+  height: 200px;
+  pointer-events: none;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.Hero-text {
+  text-align: center;
+  color: #ffe700;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+}
+
+.Overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.55);
+  position: absolute;
+}
+
+.Pro-offer {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.Pro-kit {
+  /*list-style: none;*/
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  /*flex-flow: row;*/
+  text-align: center;
+  /*justify-content: space-between;*/
+  /*padding: 0;*/
+  /*width: 100%;*/
+  /*margin: 0 auto;*/
 }
 
-.App-link {
-  color: #61dafb;
+.Pro-kit > div {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Pro-kit div > * {
+  align-self: center;
+  min-height: 35px;
+}
+
+.Equipment {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.Gimbal {
+  background-image: url("gimbal.jpg");
+}
+
+.LED {
+  background-image: url("kit.jpg");
+  background-position: right top;
+  background-size: 200px;
+}
+
+.Shotgun {
+  background-image: url("shotgun.jpg");
+}
+
+.Gray {
+    background-color: #e8e9e8;
+    padding: 12px 0;
+}
+
+.How {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.Works {
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Works li {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 0;
+}
+
+.Works li > * {
+  align-self: center;
+  min-height: 50px;
+}
+
+.Icons {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 128px;
+}
+
+.Contact {
+  background-image: url("contact.svg");
+}
+
+.Calendar {
+  background-image: url("calendar.svg");
+}
+
+.Location {
+  background-image: url("location.svg");
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.Availability {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.Key {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.Key div {
+  width: 20px;
+  height: 20px;
+}
+
+.Key div:first-child, .yes {
+  background-color: lawngreen;
+}
+
+.Key div:first-child:after {
+  content: "Available";
+  padding-left: 23px;
+  color: lawngreen;
+}
+
+.Key div:nth-child(2), .no {
+  background-color: orangered;
+}
+
+.Key div:nth-child(2):after {
+  content: "Unvailable";
+  padding-left: 23px;
+  color: orangered;
+}
+
+.Weekly {
+  margin: 32px auto;
+}
+
+.Options {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.Footer {
+  background-color: springgreen;
+  min-height: 200px;
+  position: relative;
+  margin-top: 128px;
+}
+
+.Astonishing {
+  background-image: url("astonishing.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Footer h2 {
+  color: #f45cf0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*tablet sizing*/
+@media screen and (max-width: 1024px) {
+  .App-logo {
+    height: 100px;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/*smartphone sizing*/
+@media screen and (max-width: 480px) {
+
+  .App-header {
+    height: 380px;
   }
+
+  .App-logo {
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .Hero-text h1 {
+    font-size: 24px;
+  }
+
+  .Hero-text h2, .Pro-offer, .Availability {
+    font-size: 16px;
+  }
+
+  .Pro-kit {
+    flex-flow: column;
+  }
+
+  .Works {
+    flex-flow: column;
+  }
+
 }
